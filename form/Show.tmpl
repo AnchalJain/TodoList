@@ -1,0 +1,8 @@
+{{ define "Show" }}
+	{{ template "Header" }}
+	{{ template "Menu" }}
+	<h2> Task {{ .Id }} </h2>
+		<p>Title: {{ .Title }}</p>
+		<p>Description: {{ .Description }}</p><br /> <a href="/edit?id={{ .Id }}">Edit</a></p>
+	{{ template "Footer" }}
+{{ end }}

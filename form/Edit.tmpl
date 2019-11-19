@@ -1,0 +1,12 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit todo</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .Id }}" />
+      <label> Title </label><input type="text" name="title" value="{{ .Title }}"  /><br />
+      <label> Description </label><input type="text" name="description" value="{{ .Description }}"  /><br />
+      <input type="submit" value="Save todo" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}
